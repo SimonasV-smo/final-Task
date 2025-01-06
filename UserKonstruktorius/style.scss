@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  input {
+    margin-top: 20px;
+    padding: 5px;
+  }
+  
+  ul {
+    margin: 100px auto;
+    width: 500px;
+    padding: 10px;
+    list-style: none;
+  }
+  
+  li {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  button {
+    margin-left: 20px;
+  }
+  
+  .message {
+    padding: 20px;
+    margin: 50px auto;
+    width: 500px;
+    text-align: center;
+  }
