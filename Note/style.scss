@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  
+  input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    transition: background 0.3s;
+  
+    &:hover {
+      background: #0056b3;
+    }
+  
+    &.cancel {
+      background: #dc3545;
+  
+      &:hover {
+        background: #c82333;
+      }
+    }
+  }
+  
+  .notes-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .note {
+    background: #ffeb3b;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: calc(33.333% - 10px);
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    @media (max-width: 600px) {
+      width: calc(50% - 10px);
+    }
+  
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  
+    .note-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  
+    .note-description {
+      margin-bottom: 10px;
+    }
+  
+    .note-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .delete {
+        cursor: pointer;
+        color: #dc3545;
+      }
+    }
+  
+    &.completed .note-description {
+      text-decoration: line-through;
+    }
+  }
