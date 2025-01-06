@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    margin: 0;
+  }
+  
+  .memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    background: #2e3d49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    transition: background 0.3s, color 0.3s;
+  
+    &.flipped {
+      background: #fff;
+      color: #2e3d49;
+    }
+  }
+  
+  #refresh {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background: #0056b3;
+    }
+  }
